@@ -1,0 +1,8 @@
+// Global
+@use 'global/reset';
+@use 'global/typography';
+@use 'global/global';
+@use 'global/lazysizes';
+
+// Component
+@use 'component/accordion';

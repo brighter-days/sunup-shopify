@@ -1,0 +1,88 @@
+{% for block in section.blocks %}
+  {%- case block.type -%}
+    {%- when 'title' -%}
+      <h1 class="product__title">{{- product.title -}}</h1>
+    {%- when 'vendor' -%}
+      <h4 class="product__title--sub">{{- product.vendor -}}</h4>
+    {%- when 'price' -%}
+      {%- render 'component.price', product: product -%}
+    {%- when 'string' -%}
+      <p class="product__text">{{- block.settings.title -}}</p>
+    {%- when 'cta' -%}
+      <button type="submit">{{- 'Button XD' -}}</button>
+    {%- when 'tab' -%}
+      {%- 
+        render 'component.accordion', 
+        title: block.settings.title,
+        content: block.settings.content,
+        active: block.settings.open,
+        group: section.id
+      -%}
+    {%- when 'app' -%}
+      {%- render block -%}
+  {%- endcase -%}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Product",
+    "blocks": [
+      {
+        "name": "Title",
+        "type": "title",
+        "limit": 1
+      },
+      {
+        "name": "Vendor",
+        "type": "vendor",
+        "limit": 1
+      },
+      {
+        "name": "Prices",
+        "type": "price",
+        "limit": 1
+      },
+      {
+        "name": "Call-To-Action",
+        "type": "cta",
+        "limit": 1
+      },
+      {
+        "name": "String",
+        "type": "string",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "name": "Tab",
+        "type": "tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "checkbox",
+            "id": "open",
+            "label": "Open by default?",
+            "info": "Only 1 tab can be open at a time"
+          }
+        ]
+      },
+      {
+        "type": "@app"
+      }
+    ]
+  }
+{% endschema %}

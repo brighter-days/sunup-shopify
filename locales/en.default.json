@@ -1,0 +1,12 @@
+{
+  "general": {
+    "search": {
+      "search": "Search"
+    }
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to text",
+    "refresh_page": "Refresh page",
+    "of": "of"
+  }
+}
