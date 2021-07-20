@@ -1,1 +1,2 @@
 # Playground  to see what is possible with DAWN + SHopify 2.0
+[![Build](https://github.com/pveen2/sunup-shopify/actions/workflows/webpack-build.yml/badge.svg)](https://github.com/pveen2/sunup-shopify/actions/workflows/webpack-build.yml)
