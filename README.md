@@ -1,1 +1,1 @@
-# WIP  to see what is possible with DAWN + SHopify 2.0
+# Playground  to see what is possible with DAWN + SHopify 2.0
