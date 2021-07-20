@@ -1,4 +1,6 @@
 {
+  "name": "sunup",
+  "version": "0.0.1",
   "scripts": {
     "build": "webpack b --node-env production",
     "watch:offline": "webpack watch",
