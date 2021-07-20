@@ -2,7 +2,12 @@
   assign s = section.settings
 -%}
 
-{%- render 'component.picture', img: s.image, mobile_img: s.mobile_image -%}
+<div class='px-16'>
+  {%- render 'component.image', img: s.image, mobile_img: s.mobile_image -%}
+</div>
+<div class='text-xl text-center'>
+  {{- s.title -}}
+</div>
 
 {% schema %}
   {
