@@ -1,4 +1,15 @@
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "162679318336d39c69": {
+      "type": "text-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg",
+        "title": "Hello",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "162679318336d39c69"
+  ]
 }
