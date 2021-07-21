@@ -7,7 +7,7 @@
   <div class="flex">
     {% for block in section.blocks %}
       {%- liquid
-        assign b = block.settings
+          assign b = block.settings
       -%}
       <div class="w-1/3">
         {%- render 'component.image', img: b.image -%}
