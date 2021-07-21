@@ -1,12 +1,14 @@
 {%- liquid
   assign s = section.settings
 -%}
-
-<div class='px-16'>
-  {%- render 'component.image', img: s.image, mobile_img: s.mobile_image -%}
-</div>
-<div class='text-xl text-center'>
-  {{- s.title -}}
+<div class='md:flex'>
+  <div class='md:w-1/2'>
+    <h2 class='text-2xl'>{{- s.title -}}</h2>
+    <div class='text'>{{- s.content -}}</div>
+  </div>
+  <div class='md:w-1/2'>
+    {%- render 'component.image', img: s.image, desktop_img: s.desktop_image -%}
+  </div>
 </div>
 
 {% schema %}
@@ -20,8 +22,8 @@
       },
       {
         "type": "image_picker",
-        "id": "mobile_image",
-        "label": "Mobile image"
+        "id": "desktop_image",
+        "label": "Desktop image"
       },
       {
         "type": "text",
