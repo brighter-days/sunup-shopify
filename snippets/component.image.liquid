@@ -1,15 +1,15 @@
-{%- liquid
+{% comment %} {%- liquid
   assign desktop_img = desktop_image | default: img
--%}
-{{desktop_img.url}}
+-%} {% endcomment %}
+
 {%- comment -%}theme-check-disable{%- endcomment -%}
   <img srcset="{{ img | img_url: '375x' }} 375w,
     {{ img | img_url: '750x' }} 750w,
-    {{ desktop_img | img_url: '1100x' }} 1100w,
-    {{ desktop_img | img_url: '1500x' }} 1500w,
-    {{ desktop_img | img_url: '1780x' }} 1780w,
-    {{ desktop_img | img_url: '2000x' }} 2000w,
-    {{ desktop_img | img_url: '2800x' }} 2800w"
+    {{ img | img_url: '1100x' }} 1100w,
+    {{ img | img_url: '1500x' }} 1500w,
+    {{ img | img_url: '1780x' }} 1780w,
+    {{ img | img_url: '2000x' }} 2000w,
+    {{ img | img_url: '2800x' }} 2800w"
     sizes="100vw"
     src="{{ img | img_url: '750x' }}"
     loading="lazy"
